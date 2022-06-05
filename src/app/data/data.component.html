@@ -1,0 +1,21 @@
+
+<table mat-table [dataSource]="dataSource" id="locks-table">
+        
+   
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    
+    <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+
+    <ng-container matColumnDef="deviceId">
+        <mat-header-cell *matHeaderCellDef>Device ID</mat-header-cell>
+        <mat-cell *matCellDef="let record">{{record.deviceId}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="lastTemperature">
+        <mat-header-cell *matHeaderCellDef>Last Temperature</mat-header-cell>
+        <mat-cell
+                  *matCellDef="let record">{{record.temperature}}</mat-cell>
+
+    </ng-container>
+
+</table>
